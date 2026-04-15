@@ -4,7 +4,7 @@ This repository accompanies the manuscript describing a machine learning pipelin
 
 | Module | Script | Purpose |
 |---|---|---|
-| **Classification** | `Classification/main_classify.py` | Classify needle images by amyloid concentration (2–8 wt%) at 35 kHz |
+| **Classification** | `Classification/main_unified_experiments.py` | Classify needle images by amyloid concentration (2–8 wt%) at 35 kHz |
 | **Generation** | `Generation/main_diffusion_generator_...py` | Conditional diffusion model to synthesise microscopy images at unseen concentrations |
 | **Prediction** | `Prediction/main_unified_prediction.py` | Regress amyloid concentration from needle images |
 | **UMAP** | `UMAP/umap.py` | Frozen DINOv2 ViT-B/14 embedding, UMAP visualisation, LOCO ridge regression, and in-distribution classification |
@@ -385,13 +385,10 @@ Code for C4RUDE/
 
 Data/
 └── 01 needle/
-    ├── classification/
-    │   └── 02_diff_concentrations_/   ← concentration classification data
-    └── prediction/
-        └── concentration_at_frequency_35kHz/
-            ├── train/                 ← 2 334 real training images (7 classes)
-            ├── val/                   ← 796 real validation images
-            └── test/                  ← 826 real test images  ← DEMO DATA
+    └── concentration_at_frequency_35kHz/
+        ├── train/                 ← 2 334 real training images (7 classes)
+        ├── val/                   ← 796 real validation images
+        └── test/                  ← 826 real test images  ← DEMO DATA
 
 
 ```
